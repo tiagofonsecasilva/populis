@@ -1,0 +1,22 @@
+<h2>Deputies List</h2>
+
+<h1>Books list</h1>
+{{#each deputies}}
+  <div>
+    <a href="/deputies/{{_id}}">
+      {{title}}
+    </a>
+        <a href="/deputies/{{_id}}">
+      {{title}}
+    </a>
+    <p>By: {{author.name}}</p>
+    <form action="/deputies/{{_id}}/delete" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+  <br><br>
+  {{#if image_url}}
+  <img src="{{image_url}}" alt="">
+  {{/if}}
+
+{{/each}}
